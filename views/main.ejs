@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, height=device-height" />
+    <meta name="image" content="logo.png">
+    <meta name="image:width" content="1024">
+    <meta name="image:height" content="1024">
+    <meta name="type" content="website" />
+    <meta name="url" content="https://arch-aleppo.herokuapp.com"/>
+    <meta name="title" content="arch aleppo" />
+    <meta name="description" content="يقوم موقعنا بتقديم المساعدة لطلاب الهندسة المعمارية من حيث تأمين كورسات تعليمية للبرامج الهندسية وغيرها بالاضافة لامكانية تحميل البرامج بشكل مباشر مع طرق التنصيب وتفعيل النسخ المدفوعة مجانا بالاضافة لعرض مشاريع الطلاب المنجزة لتعزيز التغذية البصرية وعرض الواجبات المطلوب انجازها" />
+  
+
+  <!-- bootstrap css -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+  <!-- css style -->
+  <link rel="stylesheet" href="main.css">
+  <title>Studio 7</title>
+</head>
+
+<body>
+  <!-- navbar start -->
+  <nav class="navbar navbar-light bg-light fixed-top" id="nav">
+    <div class="container-fluid">
+
+      <!-- navbar-logo -->
+      <a class="navbar-brand" href="#">Studio 7</a>
+
+      <!-- hamberger button -->
+      <button class="navbar-toggler" id="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" style="box-shadow: none !important;">
+
+        <!-- hamberger icon -->
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+      <!-- list menu -->
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+        <!-- header side menu -->
+        <div class="offcanvas-header">
+
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+          </h5>
+
+          <!-- close button -->
+          <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+
+        </div>
+
+        <a href="/">الرئيسية</a>
+        <a href="/courses">الكورسات</a>
+        <a href="/apps">تحميل البرامج</a>
+        <a href="/shortcuts" style="display: none;">Shortcuts</a>
+      </div>
+  </nav>
+  <!-- navbar end -->
+
+  <div class="header">
+    <div class="container">
+      <div class="container1">
+        <h2>Architect</h2>
+        <h2>Architect</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="back">
+  <div class="about_me">
+    <span>ماذا يقدم الموقع</span>
+    <p>تقديم المساعدة لطلاب الهندسة المعمارية من حيث تأمين كورسات تعليمية للبرامج الهندسية وغيرها بالاضافة لامكانية
+      تحميل البرامج بشكل مباشر مع طرق التنصيب وتفعيل النسخ المدفوعة مجانا <br> بالاضافة لعرض مشاريع الطلاب المنجزة
+      لتعزيز التغذية البصرية وعرض الواجبات المطلوب انجازها</p>
+  </div>
+
+  <!-- new project galary -->
+  <div class="finsh_project">
+
+    <div class="title">
+      <span>المشاريع المنجزة</span>
+    </div>
+
+    <div id="carouselExampleControls" class="carousel slide carousel-fade"
+      style="max-width: 880px !important; margin: auto;" data-bs-ride="carousel" data-bs-interval="false">
+      <div class="carousel-inner carouselPro">
+
+        <% newProject.forEach(img=> { %>
+          <div class="carousel-item">
+            <img src="/<%= img.filename%>" class="d-block w-100" alt="...">
+          </div>
+          <%}) %>
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- future project galary -->
+  <div class="finsh_project">
+
+    <div class="title">
+      <span>الواجبات</span>
+    </div>
+
+    <div id="carouselExampleControls2" class="carousel slide carousel-fade"
+      style="max-width: 880px !important; margin: auto;" data-bs-ride="carousel" data-bs-interval="false">
+      <div class="carousel-inner carouselFut">
+
+        <% future.forEach(img=> { %>
+          <div class="carousel-item">
+            <img src="/<%= img.filename%>" class="d-block w-100" alt="...">
+          </div>
+          <%}) %>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="about_me" style="margin-top: 100px;">
+    <span>طريقة الاستخدام</span>
+    <p>
+      تم تقسيم الموقع الى ثلاث صفحات رئيسية يمكن الوصول اليها من القائمة الجانبية وهي كالتالي
+      <br><br>
+      <span style="font-weight: 500;">
+      الرئيسية:
+      </span>
+       والتي يتم فيها عرض مشاريع الطلاب المنجزة والواجبات 
+      <br><br>
+      <span style="font-weight: 500;">
+      الكورسات:
+      </span>
+       والتي يتم فيها تأمين اغلب الكورسات التعليمية المتوفرة من جميع المنصات كاليوتيوب ويودمي وتلجرام وغيرها
+      <br><br>
+      <span style="font-weight: 500;">
+      تحميل البرامج:
+      </span>
+       يتم فيها توفير اشهر البرامج مع امكانية التحميل الفوري وشرح التثبيت بالاضافة الى برامج التكريك
+      </p>
+  </div>
+
+  <footer>
+    <span>للتواصل معي عبر</span>
+    <br><br>
+    <a href="http://t.me/yaman_dadoua"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+        fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z" />
+      </svg></a>
+    <br><br>
+  </footer>
+  </div>
+  <!--=============== BOOTSTRAP JS ===============-->
+  <script src="bootstrap.min.js"></script>
+  <script>
+    document.querySelectorAll(".carouselPro > div")[0].classList.add("active")
+    document.querySelectorAll(".carouselFut > div")[0].classList.add("active")
+  </script>
+
+  <script>
+    function loadDeviceSpecificFiles() {
+      if (navigator.userAgent.toLowerCase().match(/android/)) {
+        loadjscssfile("and_filename.js", "js"); //dynamically load JS
+        loadjscssfile("and_filename.css", "css") //dynamically load css
+        /*iPhone check*/
+      } else if (navigator.userAgent.toLowerCase().match(/iphone/) || navigator.userAgent.toLowerCase().match(/ipad/)) {
+        loadjscssfile("ios_filename.js", "js") //dynamically load JS
+        loadjscssfile("ios_filename.css", "css") //dynamically load css
+      }
+    }
+
+
+    function loadjscssfile(filename, filetype) {
+      if (filetype == "js") { //if filename is a external JavaScript file
+        var fileref = document.createElement('script')
+        fileref.setAttribute("type", "text/javascript")
+        fileref.setAttribute("src", filename)
+      } else if (filetype == "css") { //if filename is an external CSS file
+        var fileref = document.createElement("link")
+        fileref.setAttribute("rel", "stylesheet")
+        fileref.setAttribute("type", "text/css")
+        fileref.setAttribute("href", filename)
+      }
+      if (typeof fileref != "undefined") document.getElementsByTagName("head")[0].appendChild(fileref)
+    }
+  </script>
+</body>
+
+</html>

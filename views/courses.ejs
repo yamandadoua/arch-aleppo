@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, height=device-height"/>
+
+  <meta name="image" content="logo.png">
+  <meta name="image:width" content="1024">
+  <meta name="image:height" content="1024">
+  <meta name="type" content="website" />
+  <meta name="url" content="https://arch-aleppo.herokuapp.com"/>
+  <meta name="title" content="arch aleppo" />
+  <meta name="description" content="يقوم موقعنا بتقديم المساعدة لطلاب الهندسة المعمارية من حيث تأمين كورسات تعليمية للبرامج الهندسية وغيرها بالاضافة لامكانية تحميل البرامج بشكل مباشر مع طرق التنصيب وتفعيل النسخ المدفوعة مجانا بالاضافة لعرض مشاريع الطلاب المنجزة لتعزيز التغذية البصرية وعرض الواجبات المطلوب انجازها" />
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- bootstrap css -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+  <!-- css style -->
+  <link rel="stylesheet" href="courses.css">
+
+
+  <title>Architectural</title>
+</head>
+
+<body>
+  <!-- navbar start -->
+  <nav class="navbar navbar-light bg-light fixed-top" id="nav">
+    <div class="container-fluid">
+
+      <!-- navbar-logo -->
+      <a class="navbar-brand" href="#">Architecture Courses</a>
+
+      <!-- hamberger button -->
+      <button class="navbar-toggler" id="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" style="box-shadow: none !important;">
+
+        <!-- hamberger icon -->
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+      <!-- list menu -->
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+        <!-- header side menu -->
+        <div class="offcanvas-header">
+
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="font-weight: bold;">
+            </h5>
+
+          <!-- close button -->
+          <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+
+        </div>
+
+        <a href="/">الرئيسية</a>
+        <a href="/courses">الكورسات</a>
+        <a href="/apps">تحميل البرامج</a>
+        <a href="/shortcuts" style="display: none;">Shortcuts</a>
+      </div>
+  </nav>
+  <!-- navbar end -->
+
+  <div class="header">
+    <div class="container">
+      <div class="container1">
+        <h2>Courses</h2>
+        <h2>Courses</h2>
+      </div>
+    </div>
+  </div>
+<div class="back">
+  <!-- courses galary -->
+  <% courses.forEach(data=> {%>
+    <div class="wrapper">
+      <div class="title">
+        <span>
+          <%= data.option %>
+        </span>
+      </div>
+      <div class="carousel owl-carousel">
+
+        <% data.cards.forEach((card, i)=> {%>
+          <div class="card" id="c<%= i+1%>">
+            <img src="/<%= card.image.filename %>" alt="course">
+            <h2>
+              <%= card.name %>
+            </h2>
+            <p>
+              <%= card.body %>
+            </p>
+            <a href="<%= card.link %>">عرض</a>
+          </div>
+          <%})%>
+
+
+
+      </div>
+      <br><br><br><br>
+    </div>
+    <%}) %>
+
+      <!-- courses galary -->
+
+
+      <footer style="margin-top: 0;"></footer>
+</div>
+
+      <!--=============== BOOTSTRAP JS ===============-->
+      <script src="bootstrap.min.js"></script>
+
+      <script src="courses.js"></script>
+
+      <script>
+        $(".carousel").owlCarousel({
+          loop: true,
+          margin: 25,
+          autoplay: true,
+          autoplayTimeout: 5000,
+          autoplayHoverPause: true,
+          nav: true,
+          navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 2,
+            },
+            1000: {
+              items: 3,
+            },
+          }
+        })
+      </script>
+
+<script>
+  function loadDeviceSpecificFiles() {
+    if (navigator.userAgent.toLowerCase().match(/android/)) {
+      loadjscssfile("and_filename.js", "js"); //dynamically load JS
+      loadjscssfile("and_filename.css", "css") //dynamically load css
+      /*iPhone check*/
+    } else if (navigator.userAgent.toLowerCase().match(/iphone/) || navigator.userAgent.toLowerCase().match(/ipad/)) {
+      loadjscssfile("ios_filename.js", "js") //dynamically load JS
+      loadjscssfile("ios_filename.css", "css") //dynamically load css
+    }
+  }
+
+
+  function loadjscssfile(filename, filetype) {
+    if (filetype == "js") { //if filename is a external JavaScript file
+      var fileref = document.createElement('script')
+      fileref.setAttribute("type", "text/javascript")
+      fileref.setAttribute("src", filename)
+    } else if (filetype == "css") { //if filename is an external CSS file
+      var fileref = document.createElement("link")
+      fileref.setAttribute("rel", "stylesheet")
+      fileref.setAttribute("type", "text/css")
+      fileref.setAttribute("href", filename)
+    }
+    if (typeof fileref != "undefined") document.getElementsByTagName("head")[0].appendChild(fileref)
+  }
+</script>
+
+</body>
+
+</html>

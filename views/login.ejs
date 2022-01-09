@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, height=device-height"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    
+    <meta name="image" content="logo2.png">
+    <meta name="image:width" content="1024">
+    <meta name="image:height" content="1024">
+    <meta name="type" content="website" />
+    <meta name="url" content="https://arch-aleppo.herokuapp.com"/>
+    <meta name="title" content="arch aleppo" />
+    <meta name="description" content="يقوم موقعنا بتقديم المساعدة لطلاب الهندسة المعمارية من حيث تأمين كورسات تعليمية للبرامج الهندسية وغيرها بالاضافة لامكانية تحميل البرامج بشكل مباشر مع طرق التنصيب وتفعيل النسخ المدفوعة مجانا بالاضافة لعرض مشاريع الطلاب المنجزة لتعزيز التغذية البصرية وعرض الواجبات المطلوب انجازها" />
+  
+    <title>login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div>
+        <form method="post" action="/admin" id="regester">
+            <p class="alert" style="display: none;"><%= locals.msg%></p>
+            <label id="label">LOG IN</label>
+            <input type="text" class="inputs" name="user" placeholder="Name" required="required">
+            <input type="password" class="inputs" name="pass" id="last" placeholder="Password" required="required">
+            <button id="btn">Login</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, height=device-height"/>
+
+  <meta name="image" content="logo2.png">
+  <meta name="image:width" content="1024">
+  <meta name="image:height" content="1024">
+  <meta name="type" content="website" />
+  <meta name="url" content="https://arch-aleppo.herokuapp.com"/>
+  <meta name="title" content="arch aleppo" />
+  <meta name="description" content="يقوم موقعنا بتقديم المساعدة لطلاب الهندسة المعمارية من حيث تأمين كورسات تعليمية للبرامج الهندسية وغيرها بالاضافة لامكانية تحميل البرامج بشكل مباشر مع طرق التنصيب وتفعيل النسخ المدفوعة مجانا بالاضافة لعرض مشاريع الطلاب المنجزة لتعزيز التغذية البصرية وعرض الواجبات المطلوب انجازها" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- bootstrap css -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+  <!-- css style -->
+  <link rel="stylesheet" href="admin.css">
+
+
+  <title>Architectural</title>
+</head>
+
+<body>
+  <!-- navbar start -->
+  <nav class="navbar navbar-light bg-light fixed-top" id="nav">
+    <div class="container-fluid">
+
+      <!-- navbar-logo -->
+      <a class="navbar-brand" href="/dashboard">Admin Panel</a>
+      
+      <!-- hamberger button -->
+      <button class="navbar-toggler" id="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" style="box-shadow: none !important;">
+
+        <!-- hamberger icon -->
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+      <!-- list menu -->
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+        <!-- header side menu -->
+        <div class="offcanvas-header">
+
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="font-weight: bold;">
+            </h5>
+
+          <!-- close button -->
+          <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+
+        </div>
+
+        <a href="/">الرئيسية</a>
+        <a href="/courses">الكورسات</a>
+        <a href="/apps">تحميل البرامج</a>
+        <a href="/shortcuts" style="display: none;">Shortcuts</a>
+        <a href="/dashboard/logOut" >خروج</a>
+      </div>
+  </nav>
+  <!-- navbar end -->
+
+  <div class="header">
+    <div class="container">
+      <div class="container1">
+        <h2>Controls</h2>
+        <h2>Controls</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="back">
+
+  <!-- home controls -->
+
+  <div class="title over">
+
+    <!-- head -->
+
+    <span>الرئيسية</span>
+    <p>
+      <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1"
+        aria-expanded="false" aria-controls="collapseExample1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-caret-down-square" viewBox="0 0 16 16">
+          <path d="M3.626 6.832A.5.5 0 0 1 4 6h8a.5.5 0 0 1 .374.832l-4 4.5a.5.5 0 0 1-.748 0l-4-4.5z" />
+          <path
+            d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2z" />
+        </svg>
+      </button>
+    </p>
+
+
+    <!-- part one: add new project-->
+
+    <div class="collapse" id="collapseExample1">
+      <div class="card card-body" style="margin: 0 !important; width: 100%;">
+        <form action="/dashboard/addNew" method="post" enctype="multipart/form-data">
+          <label for="">اضافة مشروع منجز</label>
+          <a class="btn-img" onclick="document.getElementById('fileOne').click()">اختيار صورة المشروع</a>
+          <input type="file" name="newProject" id="fileOne" style="display: none;">
+          <button class="btn">اضافة المشروع</button>
+        </form>
+        <div class="wrapper">
+          <div class="carousel owl-carousel">
+
+            <!-- cards -->
+            <% newProject.forEach((img, i) =>{%>
+              <div class="card" id="c<%= i +1%>">
+                <img src="<%= img.filename%>" alt="course" style="height: 100% !important;">
+                <a href="/dashboard/delProject?id=<%= img._id%>" id="del">حذف</a>
+              </div>
+            <%}) %>
+          </div>
+        </div>
+      </div>
+      <br>
+      <hr style="background-color: #03a9f4; height: 2px;"><br>
+
+
+      <!-- part two: add future project-->
+
+      <div class="card card-body">
+        <form action="/dashboard/addFut" method="post" enctype="multipart/form-data">
+          <label for="">اضافة وظيفة</label>
+          <a class="btn-img" onclick="document.getElementById('fileTwo').click()">اختيار صورة الوظيفة</a>
+          <input type="file" name="future" id="fileTwo" style="display: none;">
+          <button class="btn">اضافة</button>
+        </form>
+        <div class="wrapper">
+          <div class="carousel owl-carousel">
+            <% future.forEach((img, i) =>{%>
+              <div class="card" id="c<%= i+1%>">
+                <img src="<%= img.filename%>" alt="course" style="height: 100% !important;">
+                <a href="/dashboard/delFuture?id=<%= img._id%>" id="del">حذف</a>
+              </div>
+            <%}) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- courses conteols -->
+
+  <div class="title over">
+
+
+    <span>الكورسات</span>
+    <p>
+      <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+        aria-expanded="false" aria-controls="collapseExample">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-caret-down-square" viewBox="0 0 16 16">
+          <path d="M3.626 6.832A.5.5 0 0 1 4 6h8a.5.5 0 0 1 .374.832l-4 4.5a.5.5 0 0 1-.748 0l-4-4.5z" />
+          <path
+            d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2z" />
+        </svg>
+      </button>
+    </p>
+
+    <div class="collapse" id="collapseExample">
+
+      <!-- form: add new course -->
+      <form action="/dashboard/addCourses" method="post" enctype="multipart/form-data">
+        <label for="...">اضافة كورس</label>
+        <input type="text" name="name" id="" placeholder="Enter course name" required style="direction: ltr;">
+        <input type="url" name="link" id="" placeholder="Enter course link" required style="direction: ltr;">
+        <input type="text" name="option" id="options" placeholder="Enter type course" required style="direction: ltr;">
+        <div class="courses" style="display: flex;padding: 5px 10px;">
+          <% locals.courses.forEach(course => {%>
+            <p class="options"><%= course.option%></p>
+          <%})%>
+        </div>
+        <label for="" style="font-weight: 500;">الوصف</label>
+        <textarea name="body" id="textaera" style="direction: rtl; height: 210px;" required></textarea>
+        <a id="btn-img" onclick="document.getElementById('fileth').click()">اضافة صورة</a>
+        <input type="file" name="img" id="fileth" style="display: none;">
+        <input type="submit" value="اضافة الكورس" class="submit">
+      </form>
+
+
+      <hr style="background-color: #03a9f4; height: 2px;"><br>
+
+
+      <!-- courses galary and delete course-->
+      
+      <div class="card card-body">
+        <% locals.courses.forEach(data => {%>
+          <div class="wrapper" style="margin: 0 !important;">
+            <div class="title m-3" style="margin: 0 !important; ">
+              <span style="font-size: 15px !important;"><%= data.option %></span>
+              <a href="/dashboard/delCourse?id=<%= data._id %>" style="padding: 0;" class="title_del">حذف</a>
+            </div>
+            <div class="carousel owl-carousel" style="margin: 0 !important;">
+      
+              <% data.cards.forEach((card, i)=> {%>
+                <div class="card" id="c<%= i+1%>">
+                  <img src="/<%= card.image.filename %>" alt="course">
+                  <h2><%= card.name %></h2>
+                  <p><%= card.body %></p>
+                  <a href="<%= card.link %>">عرض</a>
+                  <a href="/dashboard/delcourse/child?id=<%= data._id %>&card=<%= card._id %>" id="del">حذف</a>
+                </div>
+              <%})%>
+      
+      
+      
+            </div>
+          </div>
+        <%}) %>
+      </div>
+    </div>
+  </div>
+
+  <div class="title over">
+    <span>المشرفون</span>
+    <p>
+      <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3"
+        aria-expanded="false" aria-controls="collapseExample">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-caret-down-square" viewBox="0 0 16 16">
+          <path d="M3.626 6.832A.5.5 0 0 1 4 6h8a.5.5 0 0 1 .374.832l-4 4.5a.5.5 0 0 1-.748 0l-4-4.5z" />
+          <path
+            d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2z" />
+        </svg>
+      </button>
+    </p>
+    <div class="collapse" id="collapseExample3">
+    <div class="mb-5">
+      <form action="/dashboard/addAdmin" method="post">
+        <input type="text" placeholder="Username" name="user" required>
+        <input type="password" placeholder="password" name="pass" required>
+        <button class="options1">اضافة مشرف</button>
+      </form>
+    </div>
+
+
+
+      <table class="table">
+        <thead>
+          <tr>
+            <td scope="col">Id</td>
+            <td scope="col">الاسم</td>
+            <td scope="col">تعديل</td>
+          </tr>
+        </thead>
+        <tbody>
+          <%users.forEach(user => {%>
+            <tr>
+              <td scope="row"><%= user._id %></td>
+              <td><%= user.user %></td>
+              <td>
+                <div>
+                  <a href="/dashboard/delAdmin?id=<%= user._id%>">حذف</a>
+                </div>
+              </td>
+            </tr>
+          <%})%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <br><br><br><br><br>
+
+  </div>
+
+
+  <!--=============== BOOTSTRAP JS ===============-->
+  <script src="bootstrap.min.js"></script>
+
+  <script src="courses.js"></script>
+
+  <script>
+    document.querySelectorAll(".courses > p").forEach(ele => {
+      ele.addEventListener("click", e => {
+        document.querySelector("#options").value =  e.target.textContent
+      })
+    })
+    $(".carousel").owlCarousel({
+      loop: true,
+      margin: 25,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      nav: true,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 2,
+        },
+        1000: {
+          items: 3,
+        },
+      }
+    })
+  </script>
+
+<script>
+  function loadDeviceSpecificFiles() {
+    if (navigator.userAgent.toLowerCase().match(/android/)) {
+      loadjscssfile("and_filename.js", "js"); //dynamically load JS
+      loadjscssfile("and_filename.css", "css") //dynamically load css
+      /*iPhone check*/
+    } else if (navigator.userAgent.toLowerCase().match(/iphone/) || navigator.userAgent.toLowerCase().match(/ipad/)) {
+      loadjscssfile("ios_filename.js", "js") //dynamically load JS
+      loadjscssfile("ios_filename.css", "css") //dynamically load css
+    }
+  }
+
+
+  function loadjscssfile(filename, filetype) {
+    if (filetype == "js") { //if filename is a external JavaScript file
+      var fileref = document.createElement('script')
+      fileref.setAttribute("type", "text/javascript")
+      fileref.setAttribute("src", filename)
+    } else if (filetype == "css") { //if filename is an external CSS file
+      var fileref = document.createElement("link")
+      fileref.setAttribute("rel", "stylesheet")
+      fileref.setAttribute("type", "text/css")
+      fileref.setAttribute("href", filename)
+    }
+    if (typeof fileref != "undefined") document.getElementsByTagName("head")[0].appendChild(fileref)
+  }
+</script>
+</body>
+
+</html>
